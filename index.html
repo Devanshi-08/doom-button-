@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOOM BUTTON — Do Not Press</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="bg-glow"></div>
+
+  <header class="topbar">
+    <div class="brand">☣️ DOOM BUTTON</div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">clicks</span>
+        <span class="stat-value" id="clickCount">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">streak</span>
+        <span class="stat-value" id="streakCount">0</span>
+      </div>
+      <div class="stat stat-best">
+        <span class="stat-label">best streak</span>
+        <span class="stat-value" id="bestStreak">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="stage">
+
+    <div class="meter-wrap">
+      <div class="meter-label">
+        <span>CHAOS METER</span>
+        <span id="meterPercent">0%</span>
+      </div>
+      <div class="meter-track">
+        <div class="meter-fill" id="meterFill"></div>
+      </div>
+    </div>
+
+    <p class="quote" id="quote">A perfectly ordinary, definitely-not-cursed button.</p>
+
+    <div class="button-zone" id="buttonZone">
+      <button class="doom-btn" id="doomBtn">DO NOT PRESS</button>
+    </div>
+
+    <button class="calm-btn hidden" id="calmBtn">😮‍💨 CALM DOWN (costs your streak)</button>
+
+  </main>
+
+  <div class="meltdown hidden" id="meltdown">
+    <div class="meltdown-text">
+      <div class="meltdown-emoji">💥🔥☠️🔥💥</div>
+      <div class="meltdown-title">TOTAL SYSTEM MELTDOWN</div>
+      <div class="meltdown-sub">You clicked <span id="meltdownClicks">0</span> times. We warned you.</div>
+      <button class="reset-btn" id="resetBtn">Rebuild Civilization</button>
+    </div>
+  </div>
+
+  <div id="confetti-layer"></div>
+
+  <footer class="footer">
+    Made out of spite, HTML, CSS &amp; JavaScript. No frameworks were harmed.
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
